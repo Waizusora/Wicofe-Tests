@@ -44,3 +44,7 @@ Original Wicofe test code and documentation are intended to use MPL-2.0. Third-p
 ## Test strategy
 
 See [TEST_STRATEGY.md](TEST_STRATEGY.md) for test layers, evidence requirements, architecture coverage, and initial priorities.
+
+## Documentation index
+
+See [docs/INDEX.md](docs/INDEX.md) for this repository's technical documentation. The [central repository documentation map](https://github.com/Waizusora/Wicofe-Docs/blob/main/REPOSITORY_DOCUMENTATION_MAP.md) identifies canonical ownership and cross-repository boundaries.
