@@ -46,6 +46,22 @@ Use disposable images and virtual disks for destructive storage tests. Fixtures 
 - Service lifecycle and shutdown integration tests.
 - Reproducible image, installer, updater, and recovery tests.
 
-## 7. Current status
+## 7. ONWFS journal fault-injection matrix
+
+ONWFS journal tests must be tied to the exact journal proposal revision and use disposable disk images. At minimum, the cross-component suite must cover:
+
+- Durable commit followed by loss/torn write of the alternate journal control block; recovery must discover the commit beyond the old persisted head.
+- Torn descriptor, metadata image, commit, WRAP record, and control-copy writes.
+- Flush/FUA ordering and write-cache capability paths.
+- Crash after every home-block write during checkpoint, followed by repeated recovery.
+- Ring wrap for every head/tail position and transaction length, including the empty/full sentinel.
+- Sequence gaps, stale ring contents, and invalid records after the last valid commit.
+- Metadata block free/reallocation ordering: a block freed by an uncheckpointed transaction must remain pending-free and must not be reused until the freeing transaction is checkpointed and tail advancement is persistent.
+- Proof that replaying an older redo image cannot overwrite a block already reassigned to file data or a different metadata object.
+- Metadata invariants after replay: bitmap ownership, inode/extent references, directory references, link counts, and orphan state.
+
+The test oracle must inspect block ownership and metadata invariants, not only whether mount succeeds. CRC mismatch tests must not be treated as proof against all possible corruption; the fault model and expected error-detection properties must be recorded.
+
+## 8. Current status
 
 This strategy is a plan, not evidence of system-wide test coverage. Each test suite must link to actual CI runs or retained test reports.
