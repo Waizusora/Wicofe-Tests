@@ -20,30 +20,22 @@ Unit tests should normally remain beside the code they test. Wicofe-Tests owns t
 - State prerequisites, target architecture, and environment.
 - Distinguish automated tests from manual procedures.
 - Record expected results and failure criteria.
+- Link each conformance test to the relevant specification revision and stable requirement ID.
 - Keep fixtures deterministic and avoid embedding secrets or personal data.
 - Never report a test as passing unless it was actually executed.
-- Link each conformance test to the relevant specification revision.
 
-## Suggested structure
+## Core planning documents
 
-- `conformance/`
-- `integration/`
-- `boot/`
-- `fixtures/`
-- `test-plans/`
-- `scripts/`
+- [Test strategy](TEST_STRATEGY.md)
+- [Cross-repository test matrix](CROSS_REPOSITORY_TEST_MATRIX_0.1.md)
 
 ## Status
 
-Initial repository baseline. Test coverage is not yet comprehensive and no system-wide conformance claim is made.
+Initial repository baseline. Test coverage is not yet comprehensive and no system-wide conformance claim is made. The matrix and strategy are planning artifacts, not passing test evidence.
 
 ## License
 
 Original Wicofe test code and documentation are intended to use MPL-2.0. Third-party fixtures retain their own licenses and notices.
-
-## Test strategy
-
-See [TEST_STRATEGY.md](TEST_STRATEGY.md) for test layers, evidence requirements, architecture coverage, and initial priorities.
 
 ## Documentation index
 
