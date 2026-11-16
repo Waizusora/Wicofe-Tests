@@ -35,7 +35,7 @@ Allowed execution statuses: **PASS**, **FAIL**, **BLOCKED**, **NOT RUN**, **NOT 
 | Input | Wicofe-Input | Wicofe-Kernel, Wicofe-Drivers, WDE | Device hotplug, event ordering, seat/session isolation, malformed event rejection and permission boundaries |
 | Graphics | Wicofe-Graphics | Wicofe-Kernel, Wicofe-Drivers, WDE | Display discovery, modeset failure, buffer lifetime/synchronization, GPU reset and compositor recovery |
 | Audio | Wicofe-Audio | Wicofe-Kernel, Wicofe-Drivers, Wicofe-Services | Stream lifecycle, format negotiation, clock/latency behavior, hotplug, USB DAC bit-perfect evidence where claimed |
-| Services and init | OSynit owns PID 1/service management; Wicofe-Services owns daemons | Wicofe-Kernel, Wicofe-ABI, Wicofe-Lib, Wicofe-Tests | Dependency ordering, readiness, crash/restart policy, shutdown, privilege separation and IPC failure |
+| Services and init | Osynit owns PID 1/service management; Wicofe-Services owns daemons | Wicofe-Kernel, Wicofe-ABI, Wicofe-Lib, Wicofe-Tests | Dependency ordering, readiness, crash/restart policy, shutdown, privilege separation and IPC failure |
 | Rust/C userspace runtime | Wicofe-Libc and Wicofe-Lib; Wicofe-ABI owns syscall contract | Wicofe-SDK, Wicofe-Kernel, component consumers | Startup, allocator, I/O, process/thread primitives, TLS and runtime execution on target |
 | SDK and ports | Wicofe-SDK owns toolchain; Wicofe-Ports owns recipes; Wicofe-ThirdParty owns compliance records | Wicofe-Build, WPM, consuming components | Host contamination, pinned toolchain, source digest, reproducible build, target ABI validation and runtime level |
 | Image and installation | Wicofe-Image owns image composition; Wicofe-Installer owns installation | Wicofe-Build, Wicofe-Kernel, Wicofe-Storage | Manifest/artifact verification, target identity revalidation, install interruption, bootable result and data-preservation checks |
@@ -44,7 +44,7 @@ Allowed execution statuses: **PASS**, **FAIL**, **BLOCKED**, **NOT RUN**, **NOT 
 
 The table names contract owners; it does not imply that any participant or feature is implemented.
 
-See the [OSynit Core Init conformance matrix 0.1](OSYNIT_CONFORMANCE_MATRIX_0.1.md) for the detailed mandatory-core, kernel/ABI, IPC, daemon, image and first-boot cases.
+See the [Osynit Core Init conformance matrix 0.1](OSYNIT_CONFORMANCE_MATRIX_0.1.md) for the detailed mandatory-core, kernel/ABI, IPC, daemon, image and first-boot cases.
 
 ## 3. Test design requirements
 

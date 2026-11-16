@@ -1,13 +1,13 @@
-# OSynit Core Init Conformance Matrix 0.1
+# Osynit Core Init Conformance Matrix 0.1
 
 - **Status:** Planned cross-repository tests; none are claimed as passing by this document
-- **Specification:** [OSynit Core Architecture Contract 0.1](https://github.com/Waizusora/Wicofe-Specs/blob/main/boot/OSYNIT_CORE_ARCHITECTURE_CONTRACT_0.1.md)
-- **Implementation:** [OSynit](https://github.com/Waizusora/Osynit)
+- **Specification:** [Osynit Core Architecture Contract 0.1](https://github.com/Waizusora/Wicofe-Specs/blob/main/boot/OSYNIT_CORE_ARCHITECTURE_CONTRACT_0.1.md)
+- **Implementation:** [Osynit](https://github.com/Waizusora/Osynit)
 - **Date:** 2026-11-16
 
 ## 1. Evidence model
 
-Every case records OSynit, kernel, ABI, build, and image commit IDs; target architecture; ABI/capability revision; test fixture/image digest; execution environment; command/procedure; expected result; observed result; and retained logs.
+Every case records Osynit, kernel, ABI, build, and image commit IDs; target architecture; ABI/capability revision; test fixture/image digest; execution environment; command/procedure; expected result; observed result; and retained logs.
 
 Use the repository's standard states: PASS, FAIL, BLOCKED, NOT RUN, NOT APPLICABLE. Host tests, cross-builds, emulator runs, and physical hardware runs are separate evidence classes.
 
@@ -34,13 +34,13 @@ Use the repository's standard states: PASS, FAIL, BLOCKED, NOT RUN, NOT APPLICAB
 
 | Test ID | Participants | Scenario | Minimum expected result |
 |---|---|---|---|
-| OSY-XINT-001 | Wicofe-Kernel, Wicofe-ABI, OSynit | Kernel launches configured init as PID 1 | Correct argv/env/fd/credentials contract; OSynit enters init mode |
-| OSY-XINT-002 | Wicofe-Kernel, Wicofe-ABI, OSynit | Child exit, wait/reap and orphan adoption | Kernel semantics match ABI and OSynit process supervisor |
-| OSY-XINT-003 | Wicofe-ABI, OSynit | Unix-domain IPC and peer credentials | Versioned bounded protocol and operation authorization work |
-| OSY-XINT-004 | Wicofe-Services, OSynit | Start/stop/restart external daemon | OSynit supervises lifecycle; daemon retains domain ownership |
-| OSY-XINT-005 | Wicofe-Build, Wicofe-Image, OSynit | Target artifact handoff | Correct architecture, hash, ABI metadata and executable path are staged |
-| OSY-XINT-006 | Wicofe-Image, Wicofe-Installer, Wicofe-Kernel, OSynit | Boot installed image | Kernel launches OSynit as PID 1 and selected default target is reached |
-| OSY-XINT-007 | OSynit, Wicofe-Services | Failure recovery and system shutdown | External services stop in reverse dependency order with bounded timeouts |
+| OSY-XINT-001 | Wicofe-Kernel, Wicofe-ABI, Osynit | Kernel launches configured init as PID 1 | Correct argv/env/fd/credentials contract; Osynit enters init mode |
+| OSY-XINT-002 | Wicofe-Kernel, Wicofe-ABI, Osynit | Child exit, wait/reap and orphan adoption | Kernel semantics match ABI and Osynit process supervisor |
+| OSY-XINT-003 | Wicofe-ABI, Osynit | Unix-domain IPC and peer credentials | Versioned bounded protocol and operation authorization work |
+| OSY-XINT-004 | Wicofe-Services, Osynit | Start/stop/restart external daemon | Osynit supervises lifecycle; daemon retains domain ownership |
+| OSY-XINT-005 | Wicofe-Build, Wicofe-Image, Osynit | Target artifact handoff | Correct architecture, hash, ABI metadata and executable path are staged |
+| OSY-XINT-006 | Wicofe-Image, Wicofe-Installer, Wicofe-Kernel, Osynit | Boot installed image | Kernel launches Osynit as PID 1 and selected default target is reached |
+| OSY-XINT-007 | Osynit, Wicofe-Services | Failure recovery and system shutdown | External services stop in reverse dependency order with bounded timeouts |
 
 ## 4. Fault injection and security
 
@@ -61,4 +61,4 @@ Run each applicable case independently on x86-64 and AArch64. A host test valida
 
 ## 6. Release gate
 
-No native OSynit PID 1 conformance claim is allowed until the required kernel/ABI, process, signal, IPC, service, shutdown, and image-handoff tests pass on the claimed architecture. A documented test case or CI job definition is not a passing result.
+No native Osynit PID 1 conformance claim is allowed until the required kernel/ABI, process, signal, IPC, service, shutdown, and image-handoff tests pass on the claimed architecture. A documented test case or CI job definition is not a passing result.
