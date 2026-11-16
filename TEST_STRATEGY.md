@@ -6,6 +6,8 @@
 
 Wicofe-Tests coordinates validation across repository boundaries. Unit tests for an individual component should normally remain in that component's repository.
 
+The [Cross-Repository Test Matrix 0.1](CROSS_REPOSITORY_TEST_MATRIX_0.1.md) maps major subsystem contracts to participants and minimum validation. It is a planning document, not evidence that those tests exist or pass.
+
 ## 2. Test layers
 
 1. **Static checks:** formatting, linting, metadata validation, dependency/license policy checks.
@@ -23,6 +25,7 @@ Every test record must include:
 - Source commit(s) under test.
 - Target architecture and execution environment.
 - Exact command or reproducible procedure.
+- Fixture/image digest and prerequisites.
 - Expected and observed result.
 - Pass, fail, blocked, or not-run status.
 - Logs/artifacts where safe and practical.
@@ -62,6 +65,12 @@ ONWFS journal tests must be tied to the exact journal proposal revision and use 
 
 The test oracle must inspect block ownership and metadata invariants, not only whether mount succeeds. CRC mismatch tests must not be treated as proof against all possible corruption; the fault model and expected error-detection properties must be recorded.
 
-## 8. Current status
+## 8. Requirement traceability
 
-This strategy is a plan, not evidence of system-wide test coverage. Each test suite must link to actual CI runs or retained test reports.
+Every cross-component test should reference a stable requirement ID and exact specification revision. Maintain links from requirement to implementation, test case and execution report. Missing implementation or test evidence is a visible gap, not an implicit pass.
+
+See the [Wicofe-Specs traceability policy](https://github.com/Waizusora/Wicofe-Specs/blob/main/governance/SPECIFICATION_TRACEABILITY_POLICY_0.1.md) for the shared requirement metadata and lifecycle model.
+
+## 9. Current status
+
+This strategy and its matrix are plans, not evidence of system-wide test coverage. Each test suite must link to actual CI runs or retained test reports. The matrix must be revised as canonical specifications and implementations evolve.
