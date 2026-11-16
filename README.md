@@ -40,3 +40,7 @@ Initial repository baseline. Test coverage is not yet comprehensive and no syste
 ## License
 
 Original Wicofe test code and documentation are intended to use MPL-2.0. Third-party fixtures retain their own licenses and notices.
+
+## Test strategy
+
+See [TEST_STRATEGY.md](TEST_STRATEGY.md) for test layers, evidence requirements, architecture coverage, and initial priorities.
