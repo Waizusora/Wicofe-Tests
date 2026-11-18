@@ -28,7 +28,7 @@ Unit tests should normally remain beside the code they test. Wicofe-Tests owns t
 
 - [Test strategy](TEST_STRATEGY.md)
 - [Cross-repository test matrix](CROSS_REPOSITORY_TEST_MATRIX_0.1.md)
-- [Osynit Core Init conformance matrix 0.1](OSYNIT_CONFORMANCE_MATRIX_0.1.md) — planned PID 1, process, service, IPC, shutdown and image-handoff tests.
+- [Frenit conformance matrix 0.1](FRENIT_CONFORMANCE_MATRIX_0.1.md) — planned PID 1, process, service, IPC, shutdown and image-handoff tests; no native PID 1 capability is yet verified.
 
 ## Status
 
