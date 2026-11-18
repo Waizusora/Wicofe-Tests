@@ -5,6 +5,7 @@ This directory documents cross-repository validation, conformance suites, integr
 ## Core planning documents
 - [Test strategy](../TEST_STRATEGY.md) — test layers, evidence requirements, architecture coverage and ONWFS journal fault-injection priorities.
 - [Cross-repository test matrix 0.1](../CROSS_REPOSITORY_TEST_MATRIX_0.1.md) — subsystem ownership, integration participants and minimum conformance coverage.
+- [Frenit conformance matrix 0.1](../FRENIT_CONFORMANCE_MATRIX_0.1.md) — native init, process, signal, service, image and shutdown integration gates.
 
 ## Scope
 - ABI and specification conformance.
