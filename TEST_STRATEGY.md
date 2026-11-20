@@ -4,7 +4,7 @@
 
 ## 1. Purpose
 
-Wicofe-Tests coordinates validation across repository boundaries. Unit tests for an individual component should normally remain in that component's repository.
+Wicofe-Test coordinates validation across repository boundaries. Unit tests for an individual component should normally remain in that component's repository.
 
 The [Cross-Repository Test Matrix 0.1](CROSS_REPOSITORY_TEST_MATRIX_0.1.md) maps major subsystem contracts to participants and minimum validation. It is a planning document, not evidence that those tests exist or pass.
 
@@ -69,7 +69,7 @@ The test oracle must inspect block ownership and metadata invariants, not only w
 
 Every cross-component test should reference a stable requirement ID and exact specification revision. Maintain links from requirement to implementation, test case and execution report. Missing implementation or test evidence is a visible gap, not an implicit pass.
 
-See the [Wicofe-Specs traceability policy](https://github.com/Waizusora/Wicofe-Specs/blob/main/governance/SPECIFICATION_TRACEABILITY_POLICY_0.1.md) for the shared requirement metadata and lifecycle model.
+See the [Wicofe-Spec traceability policy](https://github.com/Waizusora/Wicofe-Spec/blob/main/governance/SPECIFICATION_TRACEABILITY_POLICY_0.1.md) for the shared requirement metadata and lifecycle model.
 
 ## 9. Current status
 
