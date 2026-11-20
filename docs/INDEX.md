@@ -14,11 +14,11 @@ This directory documents cross-repository validation, conformance suites, integr
 - Shared fixtures, test plans, coverage maps, and reproducibility instructions.
 
 ## Ownership
-Unit tests normally remain beside the implementation they test. Wicofe-Tests owns tests that validate behavior across repository boundaries. Component CI remains responsible for fast local checks.
+Unit tests normally remain beside the implementation they test. Wicofe-Test owns tests that validate behavior across repository boundaries. Component CI remains responsible for fast local checks.
 
 ## Evidence requirements
 Every test identifies specification revision, prerequisites, architecture, environment, procedure, expected result, and failure criteria. Distinguish compile checks, static analysis, emulator execution, and physical-hardware validation. Never report a test as passing unless it was run.
 
-- [Wicofe-Specs traceability policy](https://github.com/Waizusora/Wicofe-Specs/blob/main/governance/SPECIFICATION_TRACEABILITY_POLICY_0.1.md)
-- [Central Wicofe documentation index](https://github.com/Waizusora/Wicofe-Docs/blob/main/INDEX.md)
-- [Repository documentation map](https://github.com/Waizusora/Wicofe-Docs/blob/main/REPOSITORY_DOCUMENTATION_MAP.md)
+- [Wicofe-Spec traceability policy](https://github.com/Waizusora/Wicofe-Spec/blob/main/governance/SPECIFICATION_TRACEABILITY_POLICY_0.1.md)
+- [Central Wicofe documentation index](https://github.com/Waizusora/Wicofe-Doc/blob/main/INDEX.md)
+- [Repository documentation map](https://github.com/Waizusora/Wicofe-Doc/blob/main/REPOSITORY_DOCUMENTATION_MAP.md)
