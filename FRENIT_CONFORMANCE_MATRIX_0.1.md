@@ -1,9 +1,9 @@
 # Frenit Conformance Matrix 0.1
 
 - **Status:** Planned cross-repository tests; none are claimed as passing by this document.
-- **Specification:** [WIC-SPEC-BOOT-FRENIT-001](https://github.com/Waizusora/Wicofe-Specs/blob/main/boot/FRENIT_INTEGRATION_CONTRACT_0.1.md) (Proposed).
+- **Specification:** [WIC-SPEC-BOOT-FRENIT-001](https://github.com/Waizusora/Wicofe-Spec/blob/main/boot/FRENIT_INTEGRATION_CONTRACT_0.1.md) (Proposed).
 - **Implementation:** [Frenit — Free Init](https://github.com/Waizusora/Frenit).
-- **Owners:** Frenit, Wicofe-Kernel, Wicofe-ABI, Wicofe-Build, Wicofe-Image, Wicofe-Installer, Wicofe-Tests.
+- **Owners:** Frenit, Wicofe-Kernel, Wicofe-ABI, Wicofe-Build, Wicofe-Image, Wicofe-Installer, Wicofe-Test.
 - **Date:** 2026-11-18.
 
 ## 1. Evidence model
@@ -30,7 +30,7 @@ Use `PASS`, `FAIL`, `BLOCKED`, `NOT RUN`, or `NOT APPLICABLE`. Host tests, cross
 | FRN-XINT-002 | Wicofe-Kernel, Wicofe-ABI, Frenit | Spawn/exec, child exit, wait/reap and PID reuse | Exit status is preserved; children are reaped; stale PIDs cannot target replacement processes |
 | FRN-XINT-003 | Wicofe-Kernel, Wicofe-ABI, Frenit | Signal delivery and child-exit notification bursts | Required signals are delivered with bounded, documented semantics and no lost waitable child exits |
 | FRN-XINT-004 | Wicofe-Kernel, Wicofe-ABI, Frenit | Root filesystem, file descriptors, clock and mount prerequisites | Required operations follow the published ABI and fail explicitly when unavailable |
-| FRN-XINT-005 | Frenit, Wicofe-Services | Start/stop/restart a test daemon | Frenit supervises lifecycle while the daemon retains its own service-domain responsibility |
+| FRN-XINT-005 | Frenit, Wicofe-Service | Start/stop/restart a test daemon | Frenit supervises lifecycle while the daemon retains its own service-domain responsibility |
 | FRN-XINT-006 | Frenit, Wicofe-Kernel, Wicofe-ABI | Control-plane IPC and peer authorization | Transport and message format match a separately accepted contract; malformed/unauthorized requests fail closed |
 | FRN-XINT-007 | Frenit, Wicofe-Kernel, Wicofe-ABI | Graceful shutdown, timeout and power transition | Service stop order and shutdown are bounded; unsupported power operations are never reported as successful |
 
