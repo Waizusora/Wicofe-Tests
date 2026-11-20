@@ -1,4 +1,4 @@
-# Wicofe-Tests
+# Wicofe-Test
 
 Cross-component test plans, conformance suites, fixtures, and integration validation for Wicofe OS.
 
@@ -13,7 +13,7 @@ Cross-component test plans, conformance suites, fixtures, and integration valida
 
 ## Ownership boundaries
 
-Unit tests should normally remain beside the code they test. Wicofe-Tests owns tests that validate contracts or behavior across repository boundaries. Component CI remains responsible for fast local checks; this repository coordinates broader integration and conformance coverage.
+Unit tests should normally remain beside the code they test. Wicofe-Test owns tests that validate contracts or behavior across repository boundaries. Component CI remains responsible for fast local checks; this repository coordinates broader integration and conformance coverage.
 
 ## Test requirements
 
@@ -40,8 +40,8 @@ Original Wicofe test code and documentation are intended to use MPL-2.0. Third-p
 
 ## Documentation index
 
-See [docs/INDEX.md](docs/INDEX.md) for this repository's technical documentation. The [central repository documentation map](https://github.com/Waizusora/Wicofe-Docs/blob/main/REPOSITORY_DOCUMENTATION_MAP.md) identifies canonical ownership and cross-repository boundaries.
+See [docs/INDEX.md](docs/INDEX.md) for this repository's technical documentation. The [central repository documentation map](https://github.com/Waizusora/Wicofe-Doc/blob/main/REPOSITORY_DOCUMENTATION_MAP.md) identifies canonical ownership and cross-repository boundaries.
 
 ## Wicofe-wide principles
 
-Wicofe is an independent Unix-like, POSIX-compatible operating system and software ecosystem, designed as an alternative to established and widely adopted software ecosystems and technologies, including GNU. Native components must use Wicofe interfaces and must not require Linux libc or GNU compatibility layers. Prefer permissive licenses; avoid GPL/AGPL, and consider LGPL only when no suitable permissive alternative exists. Reuse or fork upstream software when implementing it from scratch would be disproportionately difficult. See the [canonical project principles](https://github.com/Waizusora/Wicofe-Docs/blob/main/PROJECT_PRINCIPLES.md).
+Wicofe is an independent Unix-like, POSIX-compatible operating system and software ecosystem, designed as an alternative to established and widely adopted software ecosystems and technologies, including GNU. Native components must use Wicofe interfaces and must not require Linux libc or GNU compatibility layers. Prefer permissive licenses; avoid GPL/AGPL, and consider LGPL only when no suitable permissive alternative exists. Reuse or fork upstream software when implementing it from scratch would be disproportionately difficult. See the [canonical project principles](https://github.com/Waizusora/Wicofe-Doc/blob/main/PROJECT_PRINCIPLES.md).
